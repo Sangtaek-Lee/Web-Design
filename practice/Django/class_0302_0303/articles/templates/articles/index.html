@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+  <h1>index 입니다.</h1>
+  <a href="{% url 'articles:greeting' %}">Greeting</a>
+  <a href="{% url 'articles:dinner' %}">Dinner</a>
+  <a href="{% url 'articles:throw' %}">Throw</a>
+
+  <a href="{% url 'pages:index' %}">Pages Index</a>
+
+{% endblock content %}
+

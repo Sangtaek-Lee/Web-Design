@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+  <div id="app">
+    <!-- <ul>
+      <li>{{fruits[0]}}</li>
+      <li>{{fruits[1]}}</li>
+      <li>{{fruits[2]}}</li>
+    </ul> -->
+    <ul>
+      <li v-for="fruit in fruits">{{ fruit }}</li>
+    </ul>
+    <ul>
+      <li v-for="(fruit, idx) in fruits"> {{idx}} : {{fruit}}</li>
+    </ul>
+    <h3>todo</h3>
+    <ul>
+      <li v-for="todo in todos"> {{todo.context}} </li>
+    </ul>
+    <ul>
+      <li v-for="todo in todos" v-if="!todo.completed"> {{todo.context}} </li> <!--v-for, v-if 같은 태그레벨에서 같이 쓰는거 권장하지 않는다. v-for, v-if 우선순위 보장하지 못하기 대문에-->
+    </ul>
+    <ul>
+      <template v-for="todo in todos" :key="`todo-id-${todo.id}`">                      <!--template tag 권장, template tag: Dom에 나타나지 않지만 vue 기능 사용 가능한 tag-->
+        <li v-if="!todo.completed">{{ todo.context }}</li>
+      </template>
+    </ul>
+    <!-- 공식문서 v-for 사용시 key 적는걸 권장 key: v-for을 효율적으로 동작시켜준다. (안적는 경우 에러가 날 수도 있는 상황이 있다.) -->
+    <!-- `todo-id-${todo.id}` key값은 중복 될 수 있기 때문에 todo-id- 와 같이 구분 점을 둬야 한다. -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        fruits: ['apple', 'banana', 'coconut'],
+        todos:[
+          { id:1, context: 'todo1', completed: false},
+          { id:2, context: 'todo2', completed: true},
+          { id:3, context: 'todo3', completed: false},
+        ],
+      }
+    })
+  </script>
+</body>
+</html>

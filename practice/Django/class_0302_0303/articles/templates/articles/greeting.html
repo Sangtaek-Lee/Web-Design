@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p>안녕 {{ info.name }}하세요!</p>
+  <p>음식 {{ foods }}</p>
+  <p>음식 {{ foods.0 }}</p>
+  <a href="{% url 'articles:index' %}">뒤로가기</a>
+  {% comment %} /을 앞에 붙이게 되면 root 경로에서 입력한 경로로 간다 {% endcomment %}
+{% endblock content %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #before {
+      background-color: greenyellow;
+    }
+    #after {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- <p @click="printHello" v-bind:id="elemId">click me</p> -->
+    <p @click="printHello" :id="elemId">click me</p>    <!--v-bind: 축약형 :-->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        elemId: 'before',
+        colorData: 0
+      },
+      methods: {
+        printHello() {
+          console.log('Hello')
+          // this.colorData += 1
+          // if (this.colorData%2 === 0) {
+          //   this.elemId = 'after'
+          // } else {
+          //   this.elemId = 'before'
+          // }
+          if (this.elemId === 'before') {
+            this.elemId = 'after'
+          } else {
+            this.elemId = 'before'
+          }
+        },
+      },
+    })
+  </script>
+</body>
+</html>

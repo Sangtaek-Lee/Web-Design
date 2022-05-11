@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">이름 : </div>
+
+  <script>
+    // CODE HERE
+    const myDiv = document.querySelector('#app')
+    let name = 'taek'
+    myDiv.innerText = `이름 : ${name}`
+    name = 'sang'
+    myDiv.innerText = `이름 : ${name}`          // 바로 반영 되지 않고 반복적으로 써줘야 하는 단점이 있다.
+    
+  
+  </script>
+</body>
+</html>

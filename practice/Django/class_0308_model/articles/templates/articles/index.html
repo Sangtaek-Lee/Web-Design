@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class='text-center'>Articles</h1>
+  <a href="{% url 'articles:new' %}">글쓰기</a>
+  <hr>
+  {% for article in articles %}
+     <p>번호 : {{article.id}}</p>
+     <a href="{% url 'articles:detail' article.id %}">제목 : {{article.title}}</a>
+     <p>내용 : {{article.content}}</p>
+     <hr>
+  {% endfor %}
+{% endblock content %}
+
+
+
+{% comment %} <h1 class='text-center'>Articles</h1>
+  {% for article in articles %}
+    {% block content %}
+      <h1>번호 : {{article.id}}</h1>
+      <h1>제목 : {{article.title}}</h1>
+      <h1>내용 : {{article.content}}</h1>
+   {% endblock content %}
+  {% endfor %} {% endcomment %}

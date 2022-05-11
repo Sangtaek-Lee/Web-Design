@@ -1,0 +1,112 @@
+/* 아래 코드는 수정하지 마세요. */
+body {
+  font-family: Arial;
+  width: 800px;
+}
+
+section {
+  float: left;
+  margin-left: 4px;
+}
+
+aside { 
+  float: right;
+  margin-right: 4px;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 여기서부터 작성하세요. */
+/* 모든 스타일 요소를 ***클래스***로 만들어 작성 후 사용합니다. */
+/* body > * {
+  background-color: lightgray;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 4px;
+  padding: 4px;
+} */
+.header {
+  background-color: lightgray;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
+  margin: 4px;
+  padding: 4px;
+}
+.nav {
+  background-color: lightgray;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 4px;
+  padding: 4px;
+}
+/* .clearfix {
+  background-color: lightgray;
+} */
+.section {
+  background-color: lightgray;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 400px;
+  height: 300px;
+}
+
+.article1 {
+  background-color: white;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 4px;
+  padding: 4px;
+}
+.article2 {
+  background-color: white;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 4px;
+  padding: 4px;
+}
+.aside{
+  background-color: lightgray;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 390px;
+  height: 300px;
+  text-align: left;
+}
+.footer{
+  background-color: lightgray;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 4px;
+  padding: 4px;
+}
+
+
+
+/* 1. article 태그는 white로 나머지 시멘틱 태그는 lightgrey로 배경색을 바꿔주세요. */
+
+/* 2. header, nav, footer 태그의 margin을 4px로 만들어주세요. */
+
+/* 3. header, nav, footer 태그의 padding을 4px로 만들어주세요. */
+
+/* 4. h1 태그를 수평 중앙 정렬 시켜주세요. */
+
+/* 5. section 태그는 width 490px height 300px, 
+   aside 태그는 width 280px height 300px로 만들어주세요.*/
+
+/* 6. 모든 semantic 태그의 border 두께를 1px, 실선, 검은색으로 만들어주세요. */
+
+/* 7. 모든 semantic 태그의 border 모서리 반경을 4px로 만들어주세요. */
+

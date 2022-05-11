@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>로또 당첨 횟수를 알아보자.</h1>
+<hr>
+<h2>이번 회차 당첨 번호 : {{numbers}} + {{bnusNo}}</h2>
+<ul>
+  <li>1등 : {{cnt_list.0}}번</li>
+  <li>2등 : {{cnt_list.1}}번</li>
+  <li>3등 : {{cnt_list.2}}번</li>
+  <li>4등 : {{cnt_list.3}}번</li>
+  <li>5등 : {{cnt_list.4}}번</li>
+  <li>꽝 : {{cnt_list.5}}번</li>
+</ul>
+
+
+{% endblock content %}

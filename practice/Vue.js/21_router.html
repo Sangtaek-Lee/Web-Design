@@ -1,0 +1,49 @@
+<!-- vue-router : SPA에서 각 주소별로 렌더링할 컴포넌트를 작성할 수 있게 해줌 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <router-link to="hello">Hello</router-link>
+    <router-link to="user">User</router-link>
+    <router-view></router-view> <!--보여줄 컴포넌트 태그-->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router@3.5.3/dist/vue-router.js"></script>  <!-- vue router CDN -->
+  <script>
+    const HelloComponent = {
+      template: '<h3>hello</h3>'
+    }
+    const UserComponent = {
+      template: '<h3>User</h3>'
+    }
+    const router = new VueRouter({      // CDN으로 가져온 VueRouter
+      mode: 'history',      // url #(해싱) 없앤다.
+      routes: [
+        // {1번 페이지에 대한 정보},
+        // {2번 페이지에 대한 정보}, ...
+        {
+          path: '/hello', //URL 경로
+          component: HelloComponent //보여줄 컴포넌트
+        },
+        {
+          path: '/user',
+          component: UserComponent,
+        },
+      ]
+    })
+
+    new Vue({
+      el: '#app',
+      router: router,
+    })
+  </script>
+</body>
+</html>
+
+
